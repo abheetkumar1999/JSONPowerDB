@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Educational registration form</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+        <style>
+            html, body {
+                min-height: 100%;
+            }
+            body, div, form, input, select, p {
+                padding: 0;
+                margin: 0;
+                outline: none;
+                font-family: Roboto, Arial, sans-serif;
+                font-size: 16px;
+                color: #eee;
+            }
+            body {
+                background: url("https://picsum.photos/600") no-repeat center;
+                background-size: cover;
+            }
+            h1, h2 {
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            h2 {
+                margin: 0 0 0 8px;
+            }
+            .main-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                padding: 25px;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .left-part, form {
+                padding: 25px;
+            }
+            .left-part {
+                text-align: center;
+            }
+            .fa-graduation-cap {
+                font-size: 72px;
+            }
+            form {
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+            }
+            input, select {
+                padding: 5px;
+                margin-bottom: 30px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #eee;
+            }
+            input::placeholder {
+                color: #eee;
+            }
+            option:focus {
+                border: none;
+            }
+            option {
+                background: black;
+                border: none;
+            }
+            .checkbox input {
+                margin: 0 10px 0 0;
+                vertical-align: middle;
+            }
+            .checkbox a {
+                color: #26a9e0;
+            }
+            .checkbox a:hover {
+                color: #85d6de;
+            }
+            .btn-item, button {
+                padding: 10px 5px;
+                margin-top: 20px;
+                border-radius: 5px;
+                border: none;
+                background: #26a9e0;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 400;
+                color: #fff;
+            }
+            .btn-item {
+                display: inline-block;
+                margin: 20px 5px 0;
+            }
+            #Save {
+                width: 100%;
+            }
+            #Save:hover, .btn-item:hover {
+                background: #85d6de;
+            }
+            @media (min-width: 568px) {
+                html, body {
+                    height: 100%;
+                }
+                .main-block {
+                    flex-direction: row;
+                    height: calc(100% - 50px);
+                }
+                .left-part, form {
+                    flex: 1;
+                    height: auto;
+                }
+            }
+            .footer-distributed {
+                background-color: #292c2f;
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+                box-sizing: border-box;
+                width: 100%;
+                text-align: left;
+                font: normal 16px sans-serif;
+                padding: 45px 50px;
+            }
+
+            .footer-distributed .footer-left p {
+                color: #8f9296;
+                font-size: 14px;
+                margin: 0;
+            }
+            /* Footer links */
+
+            .footer-distributed p.footer-links {
+                font-size: 18px;
+                font-weight: bold;
+                color: #ffffff;
+                margin: 0 0 10px;
+                padding: 0;
+                transition: ease .25s;
+            }
+
+            .footer-distributed p.footer-links a {
+                display: inline-block;
+                line-height: 1.8;
+                text-decoration: none;
+                color: inherit;
+                transition: ease .25s;
+                padding: 10px;
+            }
+
+            .footer-distributed .footer-links a:before {
+                content: "·";
+                font-size: 20px;
+                left: 0;
+                color: #fff;
+                display: inline-block;
+                padding-right: 5px;
+            }
+
+            .footer-distributed .footer-links .link-1:before {
+                content: none;
+            }
+
+            .footer-distributed .footer-right {
+                float: right;
+                margin-top: 6px;
+                max-width: 180px;
+            }
+
+            .footer-distributed .footer-right a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background-color: #33383b;
+                border-radius: 2px;
+                font-size: 20px;
+                color: #ffffff;
+                text-align: center;
+                line-height: 35px;
+                margin-left: 3px;
+                transition:all .25s;
+            }
+
+            .footer-distributed .footer-right a:hover{
+                transform:scale(1.1);
+                -webkit-transform:scale(1.1);
+            }
+
+            .footer-distributed p.footer-links a:hover{
+                text-decoration:underline;
+            }
+
+            /* Media Queries */
+
+            @media (max-width: 600px) {
+                .footer-distributed .footer-left, .footer-distributed .footer-right {
+                    text-align: center;
+                }
+                .footer-distributed .footer-right {
+                    float: none;
+                    margin: 0 auto 20px;
+                }
+                .footer-distributed .footer-left p.footer-links {
+                    line-height: 1.8;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-block">
+            <div class="left-part">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Register to our courses</h1>
+                <p>Founded to build power data structures using C++, Java and other core technologies to meet the requirements of generating fast / real-time information out of un-managed / unexpected data explosion happening in data industry.</p>
+                <div class="btn-group">
+                    <a class="btn-item" href="https://login2explore.com/jpdb/docs.html">Learn HTML</a>
+
+                </div>
+            </div>
+            <form action="/">
+                <div class="title">
+                    <i class="fas fa-pencil-alt"></i> 
+                    <h2>Register here</h2>
+                </div>
+                <div class="info">
+                    <input class="fname" type="text" name="name" id="name" placeholder="Full name">
+                    <input type="email" name="name" id="email" placeholder="Email">
+                    <input type="text" name="name" id="phone_no" placeholder="Phone number">
+                    <input type="password" name="name" id="password" placeholder="Password">
+                    <select id="course">
+                        <option value="course-type" selected>Course type*</option>
+                        <option value="short-courses">Short courses</option>
+                        <option value="featured-courses">Featured courses</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="certificate">Certificate</option>
+                        <option value="masters-degree">Masters degree</option>
+                        <option value="postgraduate">Postgraduate</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://login2explore.com/privacypolicy.html">Privacy Poalicy for Login2Xplore.</a></span>
+                </div>
+                <input type="button" class="btn btn-primary" id="Save" value="Save"
+                       onclick="saveStudent();">
+            </form>
+
+        </div>
+        <footer class="footer-distributed">
+
+            <div class="footer-right">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a class="link-1" href="#">Home</a>
+
+                    <a class="link-1" href="#">Blog</a>
+
+                    <a class="link-1" href="#">Pricing</a>
+
+                    <a class="link-1" href="#">About</a>
+
+                    <a class="link-1" href="#">Faq</a>
+
+                    <a class="link-1" href="#">Contact</a>
+                </p>
+
+                <p>Login2Xplore &copy; 2015</p>
+            </div>
+
+        </footer>
+        <script>
+            function validateAndGetFormData() {
+                var nameVar = $("#name").val();
+                if (nameVar === "") {
+                    alert("name Required Value");
+                    $("#name").focus();
+                    return "";
+                }
+                var emailVar = $("#email").val();
+                if (emailVar === "") {
+                    alert("Email is Required Value");
+                    $("#email").focus();
+                    return "";
+                }
+                var mobileVar = $("#phone_no").val();
+                if (mobileVar === "") {
+                    alert("Mobile no is Required Value");
+                    $("#phone_no").focus();
+                    return "";
+                }
+                var passwordVar = $("#password").val();
+                if (passwordVar === "") {
+                    alert("password is Required Value");
+                    $("#password").focus();
+                    return "";
+                }
+                var courseVar = $("#course").val();
+                if (courseVar === "") {
+                    alert("course is Required Value");
+                    $("#course").focus();
+                    return "";
+                }
+                var jsonStrObj = {
+
+                    Name: nameVar,
+                    Email: emailVar,
+                    mobileNo: mobileVar,
+                    course: courseVar,
+                    Password : passwordVar,
+                };
+                return JSON.stringify(jsonStrObj);
+            }
+            // This method is used to create PUT Json request.
+            function createPUTRequest(connToken, jsonObj, dbName, relName) {
+                var putRequest = "{\n"
+                        + "\"token\" : \""
+                        + connToken
+                        + "\","
+                        + "\"dbName\": \""
+                        + dbName
+                        + "\",\n" + "\"cmd\" : \"PUT\",\n"
+                        + "\"rel\" : \""
+                        + relName + "\","
+                        + "\"jsonStr\": \n"
+                        + jsonObj
+                        + "\n"
+                        + "}";
+                return putRequest;
+            }
+            function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+                var url = dbBaseUrl + apiEndPointUrl;
+                var jsonObj;
+                $.post(url, reqString, function (result) {
+                    jsonObj = JSON.parse(result);
+                }).fail(function (result) {
+                    var dataJsonObj = result.responseText;
+                    jsonObj = JSON.parse(dataJsonObj);
+                });
+                return jsonObj;
+            }
+
+            function resetForm() {
+                $("#name").val("")
+                $("#email").val("");
+                $("#phone_no").val("");
+                $("#password").focus();
+            }
+            function saveStudent() {
+                var jsonStr = validateAndGetFormData();
+                if (jsonStr === "") {
+                    return;
+                }
+                var putReqStr = createPUTRequest("90938975|-31949289223959491|90940732",
+                        jsonStr, "STUDENT", "STU-REL");
+                alert(putReqStr);
+                jQuery.ajaxSetup({async: false});
+                var resultObj = executeCommand(putReqStr,
+                        "http://api.login2explore.com:5577", "/api/iml");
+                alert(JSON.stringify(resultObj));
+                jQuery.ajaxSetup({async: true});
+                resetForm();
+            }
+
+
+
+
+        </script>
+    </body>
+</html>
