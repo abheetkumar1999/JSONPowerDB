@@ -19,3 +19,6 @@
 - It helps developers in faster coding, in-turn reduces development cost.
 
 ### Screenshots:
+![Dashboard](https://github.com/abheetkumar1999/JSONPowerDB/blob/master/dashboard.PNG)
+
+![Index Page](https://github.com/abheetkumar1999/JSONPowerDBblob/master/index.PNG)
