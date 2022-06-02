@@ -1,5 +1,5 @@
 # JSONPowerDB
-# JsonPowerDB 
+
 ### You can fork it. But before that, please give a star (It's totally free).
 
 [Documentation Link](http://login2explore.com/jpdb/docs.html)
@@ -19,6 +19,5 @@
 - It helps developers in faster coding, in-turn reduces development cost.
 
 ### Screenshots:
-![Dashboard](https://github.com/abheetkumar1999/JSONPowerDB/blob/main/dashboard.PNG)
-
-![Index Page](https://github.com/abheetkumar1999/JSONPowerDBblob/main/index.PNG)
+![index](https://user-images.githubusercontent.com/56573972/171624396-dfe20161-d0cd-462d-bcbe-1ba79c184e6b.png)
+![dashboard](https://user-images.githubusercontent.com/56573972/171624405-ffb60603-44c0-4095-b868-5e7bad1909dd.png)
